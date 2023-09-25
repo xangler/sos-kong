@@ -1,0 +1,21 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+- name: first-demo
+  url: https://httpbin.org/anything
+  routes:
+  - name: first-demo-route
+    paths:
+    - /demo/
+- name: second-demo
+  url: https://httpbin.org/anything
+  routes:
+  - name: second-demo-route
+    paths:
+    - /product/
+  plugins:
+  - config:
+      user: "admin"
+    enabled: true
+    name: demo
